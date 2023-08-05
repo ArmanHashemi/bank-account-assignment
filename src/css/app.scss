@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'yekan';
+  src: url('fonts/Yekan.eot');
+  src: url('fonts/Yekan.eot?#iefix') format('FontName-opentype'),
+  url('fonts/Yekan.woff') format('woff'),
+  url('fonts/Yekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,4 +25,12 @@ html, body{
   height: 100%;
   max-width: 100%;
   overflow: hidden;
+  font-family: 'yekan';
+}
+
+.q-item__label {
+  text-align: right !important;
+}
+.q-expansion-item--expanded {
+  border: unset !important;
 }
