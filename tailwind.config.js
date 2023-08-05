@@ -9,7 +9,7 @@ module.exports = {
       secondary: 'var(--q-secondary)',
       accent: 'var(--q-accent)',
       blue: colors.blue,
-      grey: colors.gray,
+      gray: colors.gray,
       red: colors.rose,
       green: colors.green,
       yellow: colors.yellow,
