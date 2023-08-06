@@ -58,7 +58,7 @@
             <div class="flex items-center justify-between w-16">
               <img src="~assets/icons/show.svg" class="h-4 w-4" />
               <img src="~assets/icons/edit.svg" class="h-4 w-4" />
-              <img @click.prevent="deleteItem(props.row)" src="~assets/icons/delete.svg" class="h-4 w-4" />
+              <img @click.prevent="emit('deleteConfirm',[props.row,selected])" src="~assets/icons/delete.svg" class="h-4 w-4" />
             </div>
           </q-td>
         </q-tr>
@@ -107,6 +107,7 @@
         </div>
       </div>
     </q-dialog>
+    <delete-confirm-dialog />
   </div>
 </template>
 
@@ -115,7 +116,8 @@ import { getData,filterByStatus,search } from "src/constants/tableData";
 import useEventsBus from "src/constants/eventBus";
 import { onMounted, ref, watch } from "vue";
 import { useQuasar } from 'quasar'
-const { bus } = useEventsBus()
+import DeleteConfirmDialog from "components/DeleteConfirmDialog";
+const { bus, emit } = useEventsBus()
 
 const $q = useQuasar()
 
@@ -173,6 +175,12 @@ const loadMore = ()=> {
 }
 
 const deleteItem = (row) => {
+
+  if (selected.value.length){
+    // delete multiple
+  }else{
+    // delete single
+  }
 
 }
 const filterData = () => {
