@@ -25,6 +25,9 @@ html, body{
   height: 100%;
   max-width: 100%;
   overflow: hidden;
+  color: #667085;
+}
+*{
   font-family: 'yekan';
 }
 
@@ -33,4 +36,7 @@ html, body{
 }
 .q-expansion-item--expanded {
   border: unset !important;
+}
+.app-text {
+  color: #667085;
 }
