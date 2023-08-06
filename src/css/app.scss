@@ -40,3 +40,47 @@ html, body{
 .app-text {
   color: #667085;
 }
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  to {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  from {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 400ms linear infinite;
+  -moz-animation: rotating 400ms linear infinite;
+  -ms-animation: rotating 400ms linear infinite;
+  -o-animation: rotating 400ms linear infinite;
+  animation: rotating 400ms linear infinite;
+}
+.dialog--mini {
+  width: 350px!important;
+  max-width: 95% !important;
+}
+.q-dialog__inner > div {
+  border-radius: 16px;
+}
+
